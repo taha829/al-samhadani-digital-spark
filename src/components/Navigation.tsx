@@ -37,10 +37,15 @@ const Navigation = ({ language, setLanguage }: NavigationProps) => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">AS</span>
-            </div>
+          <Link
+            to="/"
+            className={`flex items-center gap-2 ${language === "ar" ? "flex-row-reverse" : ""}`}
+          >
+            <img
+              src="/og-image.png"
+              alt={language === "en" ? "Al-Samhadani logo" : "شعار السمهداني"}
+              className="w-10 h-10 rounded-lg object-cover"
+            />
             <span className="font-bold text-lg hidden sm:block" style={{ fontFamily: language === "ar" ? "Tajawal" : "Poppins" }}>
               {language === "en" ? "Al-Samhadani" : "السمهداني"}
             </span>

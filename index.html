@@ -11,9 +11,10 @@
     <meta name="author" content="Al-Samhadani Accounting & Tax Solutions" />
     <link rel="canonical" href="https://al-samhadani.com/" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- Favicons (use og-image as a unified app/logo during development) -->
+  <!-- For production you may want a dedicated favicon.ico and apple-touch-icon.png files -->
+  <link rel="icon" href="/og-image.png" />
+  <link rel="apple-touch-icon" href="/og-image.png" />
 
     <!-- Open Graph (Facebook, WhatsApp) -->
     <meta property="og:locale" content="en_US" />
@@ -22,7 +23,9 @@
     <meta property="og:title" content="Al-Samhadani | Accounting, Tax & Digital Solutions" />
     <meta property="og:description" content="Al-Samhadani — Professional accounting, tax consulting, business software and digital marketing services in Aqaba, Jordan." />
     <meta property="og:url" content="https://al-samhadani.com/" />
-    <meta property="og:image" content="https://al-samhadani.com/og-image.png" />
+    <!-- Use root-relative path so the image is available during local dev (Vite serves files in /public)
+      Keep production absolute URL if you prefer (replace with your real domain when deployed). -->
+    <meta property="og:image" content="/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Al-Samhadani — Accounting, Tax & Digital Solutions" />
@@ -32,7 +35,7 @@
     <meta name="twitter:site" content="@AlSamhadani" />
     <meta name="twitter:title" content="Al-Samhadani | Accounting, Tax & Digital Solutions" />
     <meta name="twitter:description" content="Accounting, tax and digital solutions for businesses in Aqaba, Jordan." />
-    <meta name="twitter:image" content="https://al-samhadani.com/og-image.png" />
+  <meta name="twitter:image" content="/og-image.png" />
 
     <!-- Structured Data (Organization + LocalBusiness) -->
     <script type="application/ld+json">
@@ -43,7 +46,7 @@
           "@type":"Organization",
           "name":"Al-Samhadani",
           "url":"https://al-samhadani.com",
-          "logo":"https://al-samhadani.com/og-image.png",
+          "logo":"/og-image.png",
           "sameAs":[
             "https://www.facebook.com/your-page",
             "https://www.linkedin.com/company/your-page",
@@ -53,7 +56,7 @@
         {
           "@type":"LocalBusiness",
           "name":"Al-Samhadani Accounting & Tax Solutions",
-          "image":"https://al-samhadani.com/og-image.png",
+          "image":"/og-image.png",
           "telephone":"+962-7-XXXX-XXXX",
           "email":"info@al-samhadani.com",
           "address":{

@@ -57,6 +57,13 @@ const Layout = ({ children }: LayoutProps) => {
             
             <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground" style={{ fontFamily: language === "ar" ? "Tajawal" : "Poppins" }}>
               <p>&copy; {new Date().getFullYear()} {language === "en" ? "Al-Samhadani. All rights reserved." : "السمهداني. جميع الحقوق محفوظة."}</p>
+              <div className="mt-2 text-sm text-muted-foreground">
+                {language === "en" ? (
+                  <p>Built &amp; maintained by Al-Khatib Software</p>
+                ) : (
+                  <p>تصميم وبرمجة: الخطيب للبرمجيات</p>
+                )}
+              </div>
             </div>
           </div>
         </footer>
