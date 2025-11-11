@@ -30,7 +30,10 @@ const Navigation = ({ language, setLanguage }: NavigationProps) => {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "ar" : "en");
+    const next = language === "en" ? "ar" : "en";
+    setLanguage(next);
+    // close mobile menu if open to reflect language change immediately on small screens
+    setIsOpen(false);
   };
 
   return (
@@ -83,8 +86,12 @@ const Navigation = ({ language, setLanguage }: NavigationProps) => {
               size="icon"
               onClick={toggleLanguage}
               className="rounded-full"
+              aria-label={language === "en" ? "Switch to Arabic" : "التبديل إلى الإنجليزية"}
+              title={language === "en" ? "ع" : "EN"}
             >
               <Globe className="h-5 w-5" />
+              {/* show short language label on small screens for clarity */}
+              <span className="sr-only">{language === "en" ? "Switch to Arabic" : "Switch to English"}</span>
             </Button>
 
             <Button
